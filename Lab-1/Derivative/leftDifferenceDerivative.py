@@ -22,11 +22,8 @@ def leftDifferenceDerivative(h0, key):
     f2derivativeAnalytical = (100-x*np.log(x))*np.exp(-0.01*x)/(100*x)
     
     #Расчёт размера массивов для производной, вычисленной численным методом
-    size = int(n)
-    if size < n:
-        size+=1
-    f1derivativeNumeric = np.zeros(size)
-    f2derivativeNumeric = np.zeros(size)
+    f1derivativeNumeric = np.zeros(len(x1))
+    f2derivativeNumeric = np.zeros(len(x1))
 
     #Вычисление численной производной по формуле левой разностной производной
     j = 0

@@ -25,24 +25,21 @@ def centerDifferenceDerivative(h0, key):
     f2derivativeAnalytical = (100-x*np.log(x))*np.exp(-0.01*x)/(100*x)
     
     #Расчёт размера массивов для производной, вычисленной численным методом
-    size = int(n) + 1
-    if size < n + 1:
-        size+=1
-    f1derivativeNumeric = np.zeros(size)
-    f2derivativeNumeric = np.zeros(size)
+    f1derivativeNumeric = np.zeros(len(x1))
+    f2derivativeNumeric = np.zeros(len(x1))
 
     #Вычисление численной производной по формуле центральной разностной производной
 
     #В крайних точках
     f1derivativeNumeric[0] = (4*function1[1]-3*function1[0]-function1[2])/(2*h0)
     f2derivativeNumeric[0] = (4*function2[1]-3*function2[0]-function2[2])/(2*h0)
-    f1derivativeNumeric[size-1] = -(4*function1[size-2]-3*function1[size-1]-function1[size-3])/(2*h0)
-    f2derivativeNumeric[size-1] = -(4*function2[size-2]-3*function2[size-1]-function2[size-3])/(2*h0)
+    f1derivativeNumeric[len(x1)-1] = -(4*function1[len(x1)-2]-3*function1[len(x1)-1]-function1[len(x1)-3])/(2*h0)
+    f2derivativeNumeric[len(x1)-1] = -(4*function2[len(x1)-2]-3*function2[len(x1)-1]-function2[len(x1)-3])/(2*h0)
     
     #В остальных точках
     j = 0
     for i in x1:
-        if j >= size-1:
+        if j >= len(x1)-1:
             break
         
         if j > 0:
