@@ -1,0 +1,15 @@
+{"f": [6 , 5] ,
+"goal": "max" ,
+"constraints": [
+    {   "coefs": [-3 , 5] ,
+        "type": "leq" ,
+        "b": 25} ,
+    {   "coefs": [-2 , 5] ,
+        "type": "leq" ,
+        "b": 30} ,
+    {   "coefs": [1 , 0] ,
+        "type": "leq" ,
+        "b": 10},
+    {   "coefs": [3 , -8] ,
+        "type": "leq" ,
+        "b": 6}]}
