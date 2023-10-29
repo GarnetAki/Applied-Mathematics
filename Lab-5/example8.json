@@ -3,7 +3,7 @@
   "goal": "max",
   "constraints": [
     {
-      "coefs": [3, 3],
+      "coefs": [3, 3, 0, 0],
       "type": "eq",
       "b": 6
     },
