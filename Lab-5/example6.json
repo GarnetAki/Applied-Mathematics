@@ -1,0 +1,21 @@
+{
+  "f": [1, 2, 3],
+  "goal": "min",
+  "constraints": [
+    {
+      "coefs": [2, 2, 2],
+      "type": "leq",
+      "b": 5
+    },
+    {
+      "coefs": [1, 0, 3],
+      "type": "geq",
+      "b": 20
+    },
+    {
+      "coefs": [3, 2, 0],
+      "type": "geq",
+      "b": 100
+    }
+  ]
+}
