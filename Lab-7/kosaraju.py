@@ -1,8 +1,8 @@
 import numpy as np
 
-class Graph:
 
-    def __init__(self, matrix: np.array):
+class Graph:
+    def __init__(self, matrix: np.ndarray):
         self.matrix = matrix
 
     def dfs(self, d, visited_vertex):
@@ -23,7 +23,7 @@ class Graph:
     def transpose(self):
         return Graph(self.matrix.T)
 
-    def find_scc_cnt(self):
+    def find_striongly_connected_components_count(self):
         stack = []
         visited_vertex = [False] * len(self.matrix)
 
@@ -41,5 +41,6 @@ class Graph:
             if not visited_vertex[i]:
                 component = gr.dfs(i, visited_vertex)
                 components.append(component)
+
         return len(components)
                 
